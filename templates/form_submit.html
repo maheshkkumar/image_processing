@@ -1,0 +1,27 @@
+{% include 'header.html' %}
+	<body>
+
+    	{%- block topbar -%}
+            <nav class="navbar navbar-default navbar-static-top" role="navigation">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="/">Visual Life Logging</a>
+                </div>
+            </nav>
+        {%- endblock -%}
+
+        <div id="container">
+            <div class="title">
+            </div>
+            <div id="content">
+                <form method="post" action="{{ url_for('result') }}">
+                  <label for="yourname">Enter the Image URL or Image Name:</label>
+                  <input type="text" name="url" /><br />
+                  <input type="submit" />
+                </form>
+            </div>
+        </div>
+
+    </body>
+{% include 'footer.html' %}
+   
