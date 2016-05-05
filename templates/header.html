@@ -2,7 +2,22 @@
     
     <head>
         <title>Visual Lifelogging</title>
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/default.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/application.css') }}">
+        <script type=text/javascript src="{{ url_for('static', filename='js/default.js') }}"></script>
+        <script type=text/javascript src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+        <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     </head>
+
+    <body>
+	    <header id="main_navigation" class="clearfix">
+	      <a href="#" class="name">Visual lifelogging</a>
+	      <nav>
+	        <a id="home-page-text-2" href="/">Home</a>
+	        <a id="home-page-text-2" href="{{ url_for('project') }}">Project</a>
+	        <a id="home-page-text-2" href="{{ url_for('about') }}">About</a>
+	      </nav>
+	    </header>

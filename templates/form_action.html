@@ -1,39 +1,13 @@
 {% include 'header.html' %}
-    
-    <body>
-        {%- block topbar -%}
-            <nav class="navbar navbar-default navbar-static-top" role="navigation">
-              <div class="container-fluid">
-                <div class="navbar-header">
-                  <a class="navbar-brand" href="/">Visual Life Logging</a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-8">
-                  <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Home</a></li>
-                  </ul>
-                </div>  
-              </div>
-            </nav>
-        {%- endblock -%}
-
+    <div class="col-md-6 col-md-offset-3">
         <div id="container">
-            <div class="title">
-            </div>
             <div id="content">
-            	<h4>Image</h4>
-            	<img src="{{ url_for('static', filename='{{% image %}}') }}"></img>
-            	<br>
-            	<h4>Description</h4>
-            	<strong>{{description}}</strong>
-                <h4>Image Tags</h4>
-                <ul>
-                    {% for tag in tags %}
-                        <strong><li>{{ tag }}</li></strong>
-                    {% endfor %}
-                </ul>
+                <img id="image-result" src="{{ image }}"/>
+                <br>
+            	<h3><b>Description</b></h4>
+            	<strong><h3>{{description}}</h3></strong>
+                <h3><b>Image Tags</b></h3>
+                <h3>{{ tags }}</h3>
             </div>
         </div>
-    </body>
-
-{% include 'footer.html' %}
+    </div>

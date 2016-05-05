@@ -30,7 +30,7 @@ class ImageProcessing():
 		 
 	def get_local_image_description(self):
 		
-		rootUrl = "C:\\Users\\Mahesh Kumar\\Desktop\\"
+		rootUrl = "C:\\Users\\Mahesh Kumar\\Desktop\\image_processing\\static\\images\\"
 		pathToFileInDisk = rootUrl+self.urlImage
 		with open( pathToFileInDisk, 'rb' ) as f:
 				data = f.read()

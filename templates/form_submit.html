@@ -1,27 +1,39 @@
 {% include 'header.html' %}
-	<body>
+  
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="wrapper wrapper_padding clearfix">
+    <div class="col-2 ab homepage_content" id="project-text">
+        <h2 id="home-page-text"><b>Visual Lifelogging through User Centric Data Analysis.</b></h2>
+        <br/>    
+        <p>This project provides a thorough review of advances
+          made so far in egocentric data analysis, and in view of the current
+          state of the art, indicates new lines of research to move us towards
+          storytelling from visual lifelogging.
+      </p>             
+    </div>
 
-    	{%- block topbar -%}
-            <nav class="navbar navbar-default navbar-static-top" role="navigation">
-              <div class="container-fluid">
-                <div class="navbar-header">
-                  <a class="navbar-brand" href="/">Visual Life Logging</a>
-                </div>
-            </nav>
-        {%- endblock -%}
-
-        <div id="container">
-            <div class="title">
-            </div>
-            <div id="content">
-                <form method="post" action="{{ url_for('result') }}">
-                  <label for="yourname">Enter the Image URL or Image Name:</label>
-                  <input type="text" name="url" /><br />
-                  <input type="submit" />
-                </form>
-            </div>
-        </div>
-
-    </body>
+    <div class="col-10 ab homepage_content" id="project-text">
+      <div class="search-bar">
+        <h2 id="home-page-text"><b>Upload an Image.</b></h2>
+        <br/>
+        <form method="post" action="{{ url_for('result') }}" enctype=multipart/form-data>
+          <input type="file" name="file" placeholder="Upload">
+          <br/>
+          <input type="submit" class="btn btn-success">
+        </form>
+        <h2 id="home-page-text"><b>Create the Audio</b></h2>
+        <br/>
+        <button><a id="home-page-text-2" href="{{ url_for('audio') }}">Create the Audio</a></button>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+    
 {% include 'footer.html' %}
    
