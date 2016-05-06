@@ -4,32 +4,34 @@
   <br/>
   <br/>
   <br/>
-  <div class="wrapper wrapper_padding clearfix">
-    <div class="col-2 ab homepage_content" id="project-text">
+  <div class="container">
+    <div>
+      
+      <div class="col-md-6 project-text" id="project-text">
         <h2 id="home-page-text"><b>Visual Lifelogging through User Centric Data Analysis.</b></h2>
         <br/>    
         <p>This project provides a thorough review of advances
           made so far in egocentric data analysis, and in view of the current
           state of the art, indicates new lines of research to move us towards
           storytelling from visual lifelogging.
-      </p>             
-    </div>
-
-    <div class="col-10 ab homepage_content" id="project-text">
-      <div class="search-bar">
-        <h2 id="home-page-text"><b>Upload an Image.</b></h2>
-        <br/>
-        <form method="post" action="{{ url_for('result') }}" enctype=multipart/form-data>
-          <input type="file" name="file" placeholder="Upload">
-          <br/>
-          <input type="submit" class="btn btn-success">
-        </form>
-        <h2 id="home-page-text"><b>Create the Audio</b></h2>
-        <br/>
-        <button><a id="home-page-text-2" href="{{ url_for('audio') }}">Create the Audio</a></button>
+        </p>  
       </div>
+      
+      <div class="col-md-6" id="project-text-2">
+        <div class="search-bar">
+          <h2 id="home-page-text"><b>Upload an Image.</b></h2>
+          <br/>
+          <form method="post" action="{{ url_for('result') }}" enctype=multipart/form-data>
+            <input type="file" name="file" placeholder="Upload">
+            <br/>
+            <input type="submit" class="btn btn-success">
+          </form>
+        </div>
+      </div>
+      
     </div>
   </div>
+
   <br/>
   <br/>
   <br/>

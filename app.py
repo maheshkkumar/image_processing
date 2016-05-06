@@ -6,7 +6,7 @@ import image_processing
 import os
 from werkzeug import secure_filename
 from gtts import gTTS
-UPLOAD_FOLDER = 'static\\images'
+UPLOAD_FOLDER = 'static/images'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'JPEG', 'JPG', 'PNG'])
 
 # Initialize the Flask application
@@ -33,7 +33,7 @@ def result():
         image_file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         image_name = image_processing.ImageProcessing(filename)
         description, tags = image_name.get_image_description()
-        image = UPLOAD_FOLDER+"\\"+filename
+        image = UPLOAD_FOLDER+"/"+filename
         with open('lifelog.txt', 'a') as file:
             file.write(description+".\n")
             file.close()
@@ -43,9 +43,8 @@ def result():
 def audio():
     with open('lifelog.txt', 'r') as content_file:
         content = content_file.read()
-        content_file.close()
     tts = gTTS(text=content, lang='en')
-    tts.save('static\\music\\lifelog.mp3')   
+    tts.save('static/lifelog.mp3')   
     return render_template('audio.html')
 
 @app.route('/project')
