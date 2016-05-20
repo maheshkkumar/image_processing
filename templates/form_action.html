@@ -8,6 +8,23 @@
             	<strong><h3>{{description}}</h3></strong>
                 <h3><b>Image Tags</b></h3>
                 <h3>{{ tags }}</h3>
+                <div style="overflow:hidden;width:800px;height:300px;resize:none;max-width:100%;">
+                <div id="canvas-for-google-map" style="height:100%; width:100%;max-width:100%;">
+                    <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/search?q={{latitude}},+{{longitude}}&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>
+                </div>
+                <a class="google-map-enabler" rel="nofollow" href="https://www.hostingreviews.website/compare/network-solutions-vs-ipage" id="make-map-information">rate ipage with network solutions</a>
+                <style>#canvas-for-google-map .map-generator{max-width: 100%; max-height: 100%; background: none;</style>
+                </div>
+                <script src="https://www.hostingreviews.website/google-maps-authorization.js?id=eff5b7ff-2121-fdb2-fc00-bc29c62d40b3&c=google-map-enabler&u=1463336710" defer="defer" async="async">
+                </script>
+                <h3><b>Latitude Reference</b></h3>
+                <h3>{{ latitude_ref }}</h3>
+                <h3><b>Latitude</b></h3>
+                <h3>{{ latitude }}</h3>
+                <h3><b>Longitude Reference</b></h3>
+                <h3>{{ longitude_ref }}</h3>
+                <h3><b>Longitude</b></h3>
+                <h3>{{ longitude }}</h3>
             </div>
         </div>
     </div>

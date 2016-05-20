@@ -7,7 +7,7 @@
   <div class="container">
     <div>
       
-      <div class="col-md-6 project-text" id="project-text">
+      <div class="col-md-4 project-text" id="project-text">
         <h2 id="home-page-text"><b>Visual Lifelogging through User Centric Data Analysis.</b></h2>
         <br/>    
         <p>This project provides a thorough review of advances
@@ -17,11 +17,23 @@
         </p>  
       </div>
       
-      <div class="col-md-6" id="project-text-2">
+      <div class="col-md-4" id="project-text-2">
         <div class="search-bar">
-          <h2 id="home-page-text"><b>Upload an Image.</b></h2>
+          <h2 id="home-page-text"><b>Generate Captions</b></h2>
           <br/>
           <form method="post" action="{{ url_for('result') }}" enctype=multipart/form-data>
+            <input type="file" name="file" placeholder="Upload">
+            <br/>
+            <input type="submit" class="btn btn-success">
+          </form>
+        </div>
+      </div>
+
+      <div class="col-md-4" id="project-text-2">
+        <div class="search-bar">
+          <h2 id="home-page-text"><b>Facial Detection</b></h2>
+          <br/>
+          <form method="post" action="{{ url_for('face_result') }}" enctype=multipart/form-data>
             <input type="file" name="file" placeholder="Upload">
             <br/>
             <input type="submit" class="btn btn-success">

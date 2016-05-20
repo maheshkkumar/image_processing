@@ -8,7 +8,7 @@ import sys
 
 # Variables
 _url = 'https://api.projectoxford.ai/vision/v1/analyses'
-_key = 'f421a1b3ff16480aa22822d0a5ddc9a4'
+_key = 'a3d927e0c7524d6c8ca358c8323b7c67'
 _maxNumRetries = 10
 
 
@@ -33,17 +33,13 @@ class ImageProcessing():
 		rootUrl = "/home/mahesh/visual_lifelog/image_processing/static/images/"
 		pathToFileInDisk = rootUrl+self.urlImage
 		with open( pathToFileInDisk, 'rb' ) as f:
-				data = f.read()
-				
+				data = f.read()	
 		# Computer Vision parameters
 		params = { 'visualFeatures' : 'Description'} 
-
 		headers = dict()
 		headers['Ocp-Apim-Subscription-Key'] = _key
 		headers['Content-Type'] = 'application/octet-stream'
-
 		json = None
-
 		result = self.processRequest( json, data, headers, params )
 		return result['description']['captions'][0]['text'].encode('UTF8'), [x.encode('UTF8') for x in result['description']['tags']]
 			
